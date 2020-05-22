@@ -1,0 +1,2 @@
+Example:
+robot -d results tests/Locators.robot
