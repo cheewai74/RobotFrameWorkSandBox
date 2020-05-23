@@ -9,8 +9,16 @@ Test Teardown  End Web Test
 Test Title
     [Documentation]  This is some basic info about the test
     [Tags]  Smoke
-    Run TestCase_01
+    Given  PreCondition
+    When  Execute Step
+    Then  Verify Expected Results
 
 *** Keywords ***
-Run TestCase_01
-    Log  Running TestCase 01
+Precondtion
+    Log  In Landing Page
+
+Execute Step
+    Log  Execute Steps
+
+Verify Expected Results
+    Log  Expecteed Results

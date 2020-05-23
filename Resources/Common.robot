@@ -4,8 +4,9 @@ Library  SeleniumLibrary
 *** Variables ***
 
 *** Keywords ***
-Begin Web Test
-    Open Browser  about:blonk  chrome
+setUp
+    Open Browser  about:blank  chrome
+    Maximize Browser Window
 
-End Web Test
+tearDown
     Close Browser

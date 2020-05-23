@@ -1,9 +1,9 @@
 *** Settings ***
 Documentation  This is some basic information about the whole suite
 Library  SeleniumLibrary
+Library  SeleniumLibrary
 
 *** Variables ***
-
 
 *** Test Cases ***
 User must sign in to check out
