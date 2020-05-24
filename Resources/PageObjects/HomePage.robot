@@ -8,6 +8,11 @@ Herokuapp Homepage
     GO TO  https://the-internet.herokuapp.com/
     Wait Until Page Contains  Welcome to the-internet
 
+Click LinkText
+    [Arguments]  ${link_Text}
+    Click Link  linktext=${link_Text}
+    Wait Until Page Contains  ${link_Text}
+
 Form Authentication
     # GO TO  https://the-internet.herokuapp.com/
     # Wait Until Page Contains  Welcome to the-internet

@@ -2,10 +2,11 @@
 Library  SeleniumLibrary
 
 *** Variables ***
+${BROWSER} =  chrome
 
 *** Keywords ***
 setUp
-    Open Browser  about:blank  chrome
+    Open Browser  about:blank  ${BROWSER}
     Maximize Browser Window
 
 tearDown
