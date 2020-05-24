@@ -9,6 +9,8 @@ Suite Setup  setUp
 Suite Teardown  teardown
 
 *** Variables ***
+#${USERNAME} =  tomsmith
+#${PASSWORD} =  SuperSecretPassword!
 
 *** Test Cases ***
 Testcase 01
@@ -16,8 +18,8 @@ Testcase 01
     [Tags]  Smoke - Login Test
 
     Given User on user login page
-    When User enter username
-    when User enter password
+    When User enter username  tomsmith
+    when User enter password  SuperSecretPassword!
     when User click login button
     Then User on Secure Login Page
 
@@ -34,10 +36,12 @@ User on user login page
     HomePage.Form Authentication
 
 User enter username
-    LoginPage.Username
+    [Arguments]  ${username}
+    LoginPage.Username  ${username}
 
 User enter password
-    LoginPage.Password
+    [Arguments]  ${password}
+    LoginPage.Password  ${password}
 
 User click login button
     LoginPage.Login Button

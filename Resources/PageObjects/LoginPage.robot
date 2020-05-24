@@ -3,14 +3,19 @@ Library  SeleniumLibrary
 
 *** Variables ***
 
+
 *** Keywords ***
 
 Username
-    Input Text  id=username  tomsmith
+    [Arguments]  ${username}
+    Log  Key in username ${username}
+    Input Text  id=username  ${username}
     Sleep  2s
 
 Password
-    Input Text  id=password  SuperSecretPassword!
+    [Arguments]  ${password}
+    Log  Key in password ${password}
+    Input Text  id=password  ${password}
     Sleep  2s
 
 Login Button
